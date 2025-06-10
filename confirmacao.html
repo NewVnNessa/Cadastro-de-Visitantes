@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirmacao</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #e2e6f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        section{
+            width: 350px;
+            border-style: solid;
+            text-align: center;
+            border-radius: 15px;
+            border-color: rgb(4, 4, 114);
+            background-color: rgb(249, 249, 249);
+            box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.5);
+            padding: 30px 20px; 
+            box-sizing: border-box;
+        }
+
+        .linha_pontilhada{
+            width: 100%; 
+            border-top: 1px dotted rgb(4, 4, 114);
+            margin: 15px 0;
+        }
+
+        .titulo1{
+            color:rgb(7, 7, 146);
+            margin-bottom: 5px;
+        }
+        .titulo2{
+            color:rgb(67, 67, 189);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    
+
+    <section id="cracha">
+        
+        <h3 class="titulo1">IndTech Automação</h3>
+        <h1 class="titulo2">Crachá de Visitante</h1>
+        
+
+        <div class="linha_pontilhada"></div>
+
+        <p><strong>Nome:</strong> <span id="campoNome"></span></p>
+        <p><strong>Empresa:</strong> <span id="campoEmpresa"></span></p>
+        <p><strong>Documento:</strong> <span id="campoDocumento"></span></p>
+        <p><strong>Setor a visitar:</strong> <span id="campoSetor"></span></p>
+        
+
+        <div class="linha_pontilhada"></div>
+
+        <p><strong>Data de Entrada:</strong> <span id="campoData"></span></p>
+
+
+
+        <script>
+            function pegarDados(nome) {
+              const urlParams = new URLSearchParams(window.location.search);
+              return urlParams.get(nome);
+            }
+
+            window.onload = function () {
+                document.getElementById('campoNome').innerText = pegarDados('nome');
+                document.getElementById('campoEmpresa').innerText = pegarDados('empresa');
+                document.getElementById('campoDocumento').innerText = pegarDados('documento');
+                document.getElementById('campoSetor').innerText = pegarDados('setor');
+
+                const hoje = new Date().toLocaleDateString('pt-BR');
+                document.getElementById('campoData').innerText = hoje;
+            }
+        </script>
+    </section>
+</body>
+</html>
