@@ -1,0 +1,1 @@
+Nesse projeto, você foi convidado para um evento de tecnologia. Na página principal você coloca suas informações e escolhe qual das 4 sessões disponíveis você quer visitar no evento. Depois, receberá um crachá virtual com seus dados e a sessão escolhida.
