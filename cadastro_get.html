@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastroVisitante</title>
+
+    <style>
+     div{
+        background-color: rgb(6, 6, 92);
+        text-align: center;
+        display: block;
+        color:aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100px; 
+        border: 10px solid rgb(12, 2, 88);  
+        border-radius: 25px; 
+    }
+     section{
+        background-color: #fff;
+        max-width: 450px;
+        margin: 40px auto;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        color: #333;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+     }
+     input{
+        width: 440px;
+        height: 25px;
+        padding: 5px; 
+        font-size: 16px; 
+        margin-bottom: 10px;
+     }
+     button{
+        background-color: rgb(17, 17, 145);
+        color:aliceblue;
+        width:70px;
+        height: 35px;
+        border-radius: 10px;
+        cursor: pointer;
+     }
+     button:hover {
+        background-color: rgb(25, 25, 185);
+     }
+     body{
+        background-color:  #e2e6f5;
+     }
+    </style>
+</head>
+
+
+<body>
+    <form action="confirmacao.html" method="get">
+
+        <div class="header" id="header">
+         <h2>IndTech Automação</h2>
+         <h5>Registro de Visitantes</h5>
+        </div>
+
+        <section id="formulario">
+             <h1>Formulário de Cadastro</h1>
+
+             <label for="nome">Nome completo:</label><br>
+             <input type="text" id="nome" name="nome" required><br><br>
+
+             <label for="empresa">Empresa:</label><br>
+             <input type="text" id="empresa" name="empresa" required><br><br>
+
+             <label for="documento">Documento(RG ou CPF):</label><br>
+             <input type="text" id="documento" name="documento" required><br><br>
+
+             <label for="setor">Setor a visitar:</label><br>
+             <input type="text" id="setor" name="setor" list="listaSetor" required>
+            <datalist id="listaSetor">
+                 <option value="Manutenção">
+                 <option value="Automação">
+                 <option value="Recursos Humanos">
+                 <option value="Tecnologia da Informação">
+            </datalist><br><br>
+            <button type="submit">Enviar</button>
+        </section>   
+    </form>     
+</body>
+</html>
